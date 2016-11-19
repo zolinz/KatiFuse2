@@ -36,7 +36,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <clearOutputDir>false</clearOutputDir>
+                    <clearOutputDir>true</clearOutputDir>
                     <outputDirectory>src/main/java</outputDirectory>
                     <sources>
                         <source>src/main/resources/schemas/Address1.xsd</source>

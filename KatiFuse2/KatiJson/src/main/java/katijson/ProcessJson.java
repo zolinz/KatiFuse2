@@ -19,7 +19,7 @@ public class ProcessJson {
 
             // Convert JSON string from file to Object
             Address1 addr1 = mapper.readValue(new File("KatiJson/src/main/resources/data/Address1.json"), Address1.class);
-            System.out.println(addr1);
+            System.out.println(addr1.getCountry());
 
             //Pretty print
             String prettyAddr1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(addr1);

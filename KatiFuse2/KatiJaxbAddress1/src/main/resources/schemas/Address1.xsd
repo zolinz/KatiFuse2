@@ -9,6 +9,8 @@
         <xs:element type="xs:string" name="streetname"/>
         <xs:element type="xs:string" name="postcode"/>
         <xs:element type="xs:string" name="country"/>
+        <xs:element type="xs:string" name="countrycode"/>
+        <xs:element type="xs:string" name="currency"/>
       </xs:sequence>
     </xs:complexType>
 
