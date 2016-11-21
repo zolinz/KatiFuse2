@@ -15,11 +15,11 @@
             <artifactId>kati-jaxb-addr1</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-       <!-- <dependency>
+        <dependency>
             <groupId>kati</groupId>
             <artifactId>kati-jaxb-addr2</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
 </project>

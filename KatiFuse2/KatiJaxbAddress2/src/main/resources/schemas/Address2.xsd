@@ -6,8 +6,8 @@
             <xs:sequence>
                 <xs:element type="xs:string" name="numberOfStreet"/>
                 <xs:element type="xs:string" name="nameOfStreet"/>
-                <xs:element type="xs:string" name="postCode"/>
-                <xs:element type="xs:string" name="residenceCountry"/>
+               <!-- <xs:element type="xs:string" name="postCode"/>
+                <xs:element type="xs:string" name="residenceCountry"/>-->
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -34,6 +34,8 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <!-- clean output directory before generation -->
+                    <clearOutputDir>true</clearOutputDir>
                     <outputDirectory>src/main/java</outputDirectory>
                     <sources>
                         <source>src/main/resources/schemas/Address2.xsd</source>
