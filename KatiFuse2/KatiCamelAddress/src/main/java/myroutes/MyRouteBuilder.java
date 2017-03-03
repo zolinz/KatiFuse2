@@ -2,7 +2,6 @@ package myroutes;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.converter.jaxb.JaxbDataFormat;
-import org.apache.camel.model.dataformat.JsonLibrary;
 import processors.AddressProcessor;
 
 /**
@@ -15,18 +14,19 @@ public class MyRouteBuilder extends RouteBuilder {
 
     public void configure() throws Exception {
 
-        JaxbDataFormat jaxbDataFormat = new JaxbDataFormat("kati.addr1");
+        JaxbDataFormat jaxbDataFormatIn = new JaxbDataFormat("kati.addr1");
+        JaxbDataFormat jaxbDataFormatOut = new JaxbDataFormat("kati.addr2");
 
 
-        from("file:KatiCamelJaxb/src/main/resources/data/inbox?noop=true")
-                .unmarshal(jaxbDataFormat)
+        //from("ftp:
+        from("file:KatiCamelAddress/src/main/resources/data/inbox?noop=true")
+                .unmarshal(jaxbDataFormatIn)
                 //this is to inovke processAddress method on AddressProcessor object
                 .bean(addrProcessor, "processAddress")
                 //this is a default json marshalling using object properties , second argument is for pretty print
-                .marshal().json(JsonLibrary.Jackson, true)
+                .marshal(jaxbDataFormatOut)
                 //set file name
-                .setHeader("CamelFileName", simple("KatiOut.json"))
-                .to("file:KatiCamelJaxb/src/main/resources/data/outbox");
+                .to("file:KatiCamelAddress/src/main/resources/data/outbox");
 
 
 
